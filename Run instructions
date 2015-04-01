@@ -1,0 +1,15 @@
+
+Requirements:
+    Node.js v0.10.x+
+    npm (which comes bundled with Node) v2.1.0+
+	bower
+	grunt-cli
+    git
+
+Installation:
+	curl -sL https://deb.nodesource.com/setup | sudo bash -	
+	sudo apt-get install -y nodejs
+	npm install --global bower grunt-cli
+
+Run:
+	grunt serve
