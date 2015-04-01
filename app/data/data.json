@@ -1,0 +1,25 @@
+[{
+	"name": "Alexey Sidorenko",
+	"phone": "+380441234567890",
+	"address": "Kyiv, Novokzalnaya, 16, flat 5"				
+},{
+	"name": "Alexey Mischuk",
+	"phone": "+380441234567809",
+	"address": "Kyiv, Novokzalnaya, 14, flat 5"				
+},{
+	"name": "Alexander Novikov",
+	"phone": "+380441234567980",
+	"address": "Kyiv, Starovokzalnaya, 1, flat 3"				
+},{
+	"name": "Semen Korochkin",
+	"phone": "+380440987654321",
+	"address": "Sumy, Kievska, 7, flat 15"				
+},{
+	"name": "Stepan Avdeev",
+	"phone": "+380440987123456",
+	"address": "Kharkiv, Truda ave, 112, flat 139"				
+},{
+	"name": "Konstantin Gavrilenko",
+	"phone": "+380441234098765",
+	"address": "Kyiv, Pravdy ave., 78, flat 75"				
+}]

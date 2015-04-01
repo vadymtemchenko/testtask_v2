@@ -1,0 +1,63 @@
+<input  ng-hide="addBlock" class="new_record btn-success" type="button" value="add new record" ng-click="addBlock = true">
+<table ng-show="addBlock">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Address</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><input ng-model="newRecord.name" placeholder="Name Surname"></td>
+			<td><input ng-model="newRecord.phone" placeholder="+381234567890"></td>
+			<td><input class="address" ng-model="newRecord.address" placeholder="City, Street, #, flat #"></td>
+			<td><input class="btn-success" type="button" value="add" ng-click="updateRecord()"></td>
+			<td><input class="btn-warning" type="button" value="cancel" ng-click="addBlock = false"></td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="filters">filters:</div>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Address</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><input ng-model="filters.name" ng-change="filterRecords()"></td>
+			<td><input ng-model="filters.phone" ng-change="filterRecords()"></td>
+			<td><input class="address" ng-model="filters.address" ng-change="filterRecords()"></td>
+			<td><input class="btn-warning" type="button" value="clear filters" ng-click="filters = {}; filterRecords()"></td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="records">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Address</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="d in filtered | orderBy:'name'">
+			{{d}}
+			<td><input ng-model="d.name"></td>
+			<td><input ng-model="d.phone"></td>
+			<td><input class="address" ng-model="d.address"></td>
+			<td><input class="btn-primary" type="button" value="update" ng-click="updateRecord(d.id)"></td>
+			<td><input class="btn-danger" type="button" value="delete" ng-click="deleteRecord(d.id)"></td>
+		</tr>
+	</tbody>
+</table>
