@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name addressBook
+ * @name address book
  * @description
- * # addressBook
+ * # address book
  *
  * Main module of the application.
  */
 angular
-  .module('addressBook', [
+  .module('address book', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

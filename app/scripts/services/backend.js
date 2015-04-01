@@ -1,16 +1,16 @@
-angular.module('addressBook')
+angular.module('address book')
 .service('Backend', ['$http',
 	function($http){
-		this.url = "";
+		this.url = '';
 		
-		this.loadRecords = function (){
+		this.loadRecords = function(){
 			return $http({
 				method: 'GET',
-				url: 'data/data.json',
+				url: 'data/data.json'
 			});
 		};
 		
-		this.updateRecord = function (index, data){
+		this.updateRecord = function(index, data){
 			//emulate working with database
 			var ab = JSON.parse(localStorage.addressBook);
 			delete data.id;
@@ -28,7 +28,7 @@ angular.module('addressBook')
 			});
 		};
 		
-		this.deleteRecord = function (index){
+		this.deleteRecord = function(index){
 			//emulate working with database
 			var ab = JSON.parse(localStorage.addressBook);
 			ab.splice(index, 1);

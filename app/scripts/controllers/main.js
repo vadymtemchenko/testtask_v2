@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('addressBook')
-	.controller('MainCtrl', ['$scope','Backend', function ($scope, Backend) {
+angular.module('address book')
+	.controller('MainCtrl', ['$scope','Backend', function($scope, Backend) {
 
-		$scope.init = function (){
+		$scope.init = function(){
 			var self = this,
 				ab = localStorage.addressBook;
 			
@@ -16,16 +16,16 @@ angular.module('addressBook')
 					}
 				});
 			} else {
-				self.data = JSON.parse(ab);
-				self.filterRecords();
+				$scope.data = JSON.parse(ab);
+				$scope.filterRecords();
 			}			
 		};
 			
-		$scope.filterRecords = function (){
+		$scope.filterRecords = function(){
 			var filters = $scope.filters,
 				filtered;
 			
-			filtered = $scope.data.map(function (record ,id){
+			filtered = $scope.data.map(function(record ,id){
 				record.id = id;
 				return record;
 			});
@@ -39,11 +39,10 @@ angular.module('addressBook')
 			$scope.filtered = filtered;
 		};
 		
-		$scope.updateRecord = function (index){
-			var index,
-				data; 
+		$scope.updateRecord = function(index){
+			var data; 
 			
-			if(typeof index === "undefined"){
+			if(typeof index === 'undefined'){
 				index = $scope.data.length;
 				data = $scope.newRecord;
 				$scope.newRecord = {};
@@ -55,10 +54,10 @@ angular.module('addressBook')
 			$scope.filterRecords();
 		};
 		
-		$scope.deleteRecord = function (index){
+		$scope.deleteRecord = function(index){
 			var index;
 			
-			if(typeof index === "undefined"){
+			if(typeof index === 'undefined'){
 				return;
 			} else {
 				$scope.data.splice(index, 1);

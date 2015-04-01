@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name addressBook.controller:AboutCtrl
+ * @name address book.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the addressBook
+ * Controller of the address book
  */
-angular.module('addressBook')
+angular.module('address book')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
