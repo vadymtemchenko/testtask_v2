@@ -32,9 +32,9 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td><input ng-model="filters.name" ng-change="filterRecords()"></td>
-			<td><input ng-model="filters.phone" ng-change="filterRecords()"></td>
-			<td><input class="address" ng-model="filters.address" ng-change="filterRecords()"></td>
+			<td><input ng-model="filters.name"></td>
+			<td><input ng-model="filters.phone"></td>
+			<td><input class="address" ng-model="filters.address"></td>
 			<td><input class="btn-warning" type="button" value="clear filters" ng-click="filters = {}; filterRecords()"></td>
 		</tr>
 	</tbody>
@@ -51,8 +51,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="d in filtered | orderBy:'name'">
-			{{d}}
+		<tr ng-repeat="d in data | filterAddress:filters | orderBy:'name'">
 			<td><input ng-model="d.name"></td>
 			<td><input ng-model="d.phone"></td>
 			<td><input class="address" ng-model="d.address"></td>
