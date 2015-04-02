@@ -7,9 +7,10 @@ Requirements:
     git
 
 Installation:
-	curl -sL https://deb.nodesource.com/setup | sudo bash -	
-	sudo apt-get install -y nodejs
-	npm install --global bower grunt-cli
+	#curl -sL https://deb.nodesource.com/setup | sudo bash -	
+	#sudo apt-get install -y nodejs
+	#npm install --global bower grunt-cli
 
 Run:
-	grunt serve
+	change directory to project root folder and run:
+	#grunt serve	or		#grunt serve --force

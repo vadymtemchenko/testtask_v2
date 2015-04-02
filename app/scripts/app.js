@@ -2,32 +2,32 @@
 
 /**
  * @ngdoc overview
- * @name address book
+ * @name addressBook
  * @description
- * # address book
+ * # addressBook
  *
  * Main module of the application.
  */
 angular
-  .module('address book', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+	.module('addressBook', [
+		'ngAnimate',
+		'ngCookies',
+		'ngResource',
+		'ngRoute',
+		'ngSanitize',
+		'ngTouch'
+	])
+	.config(function($routeProvider) {
+		$routeProvider
+			.when('/', {
+				templateUrl: 'views/main.html',
+				controller: 'MainCtrl'
+			})
+			.when('/about', {
+				templateUrl: 'views/about.html',
+				controller: 'AboutCtrl'
+			})
+			.otherwise({
+				redirectTo: '/'
+			});
+	});

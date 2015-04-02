@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name address book.controller:AboutCtrl
+ * @name addressBookaddressBookcontroller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the address book
+ * Controller of the addressBook
  */
-angular.module('address book')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('addressBook')
+	.controller('AboutCtrl', function($scope) {
+		$scope.awesomeThings = [
+			'HTML5 Boilerplate',
+			'AngularJS',
+			'Karma'
+		];
+	});
